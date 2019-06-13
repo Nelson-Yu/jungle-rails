@@ -7,6 +7,7 @@
   <% if @cart.blank? %>
     <div>
       <h3> Your cart is empty! Please add items before checkout</h3>
+      <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
     </div>
   <% else %>
     <div class="panel panel-default items">
