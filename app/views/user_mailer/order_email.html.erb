@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thank you for shopping with us!</h1>
+    <p>
+      Confirm your order! Your order number is #<%= @order.id %>
+      Your order total is $<%= @order.total %>
+    </p>
+    <p>
+      <h4> Order Receipt</h4>
+      <%= render @order.line_items%>
+    </p>
+    <p>Thanks for your purchase and have a great day!</p>
+  </body>
+</html>
