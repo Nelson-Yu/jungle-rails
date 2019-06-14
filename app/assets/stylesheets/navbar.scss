@@ -1,0 +1,32 @@
+body {
+  .navbar-default {
+    background-color: #E8EDDF;
+
+    .navbar-nav > li > a {
+      font-size: 16px;
+      line-height: 40px;
+      color: #689F38;
+    }
+  }
+
+  .navbar {
+    margin: 0px;
+    height: 70px;
+
+    .container {
+      height: 70px;
+
+      .navbar-header {
+        height: 70px;
+
+        .navbar-brand {
+          font-size: 25px;
+          line-height: 40px;
+          color: #174312;
+        }
+      }
+
+    }
+  }
+
+}
