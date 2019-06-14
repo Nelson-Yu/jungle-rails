@@ -28,6 +28,19 @@
 
   </article>
 
+  <% if @current_user %>
+    <h1>Create a review</h1>
+      <%= form_for :review, url: product_reviews_path(@product) do |f| %>
+        <%= f.label :description %><br>
+        <%= f.text_field :description%><br>
+
+        <%= f.select :rating, options_for_select(1..5), { prompt: "Rate this Product!" } %>
+
+        <%= f.submit("Create review") %><br>
+
+      <% end %>
+  <% end %>
+
   <div>
     <h4>Reviews</h4>
     <%= render @reviews %>
