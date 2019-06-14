@@ -22,12 +22,15 @@
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
-          <dt>Reviews</dt>
-          <%= render @reviews %>
         </dl>
       </div>
     </div>
 
   </article>
+
+  <div>
+    <h4>Reviews</h4>
+    <%= render @reviews %>
+  </div>
 
 </section>
