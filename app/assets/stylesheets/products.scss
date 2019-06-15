@@ -1,24 +1,95 @@
-main .products-show {
+main {
+  .products-show {
+    background-color: white;
+    padding: 10px 30px 30px;
+    margin: 30px 0px;
+    border-radius: 5px;
+    border: 3px solid #689F38;
 
-  .product-detail {
+    .page-header {
+      margin: 20px 0px;
+      border-bottom: 1px solid #689F38
+    }
 
-    .col-sm-8 {
-      font-size: 18px;
+    .product-detail {
+
+      .col-sm-8 {
+        font-size: 18px;
+      }
     }
   }
 
   .reviews-container {
-    width: 60%;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    .col-sm-4, .col-sm-7 {
+      font-size: 16px;
+      background-color: white;
+      border-radius: 5px;
+      border: 3px solid #689F38;
+      margin-bottom: 30px;
+    }
 
-    .create-review {
+    .col-sm-4 {
       text-align: center;
+      margin-right: 8.3%;
+      padding-bottom: 10px;
 
-      input[type="text"] {
-        width: 60%;
+      select {
+        background-color: #174312;
+        color: white;
+        height: 50px;
+      }
+
+      textarea {
+        width: 80%; 
+        height: 75px;
+      }
+      
+      input[type="submit"] {
+        background-color: white;
+        color: #174312;
+        width: 175px;
+        height: 40px;
+        border-radius: 3px;
+        border: 1px solid #174312;
+        margin: 10px 0px;
+
+      }
+
+      input[type="submit"]:hover {
+        background-color: #174312;
+        color: white;
+      }
+    }
+
+    .col-sm-7 {
+      h3, p {
+        text-align: center;
+      }
+
+      p {
+        border-bottom: solid #689F38;
+      }
+
+      .single-review {
+        border-bottom: 1px solid #689F38;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+
+        input[type="submit"] {
+          background-color: white;
+          color: #174312;
+          width: 75px;
+          height: 30px;
+          border-radius: 3px;
+          border: 1px solid #174312;
+        }
+
+        input[type="submit"]:hover {
+          background-color: #174312;
+          color: white;
+        }
       }
     }
   }
 }
+

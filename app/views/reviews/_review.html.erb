@@ -1,6 +1,13 @@
-<p><%= review.description %> </p>
-<p><%= review.rating %></p>
+<div class="single-review">
+  <dt>Name</dt>
+  <dd><%= "#{review.user.first_name} #{review.user.last_name}" %></dd>
+  <dt>Comment</dt>
+  <dd><%= review.description %> </dd>
+  <dt>Rating</dt>
+  <dd><%= review.rating %>⭐</dd>
+  <% if @current_user == review.user  %>
+    <dd><%= button_to "Delete", product_review_path(review.product_id, review.id), method: :delete %></dd>
+  <% end %>
+</div>
 
-<% if @current_user == review.user  %>
-  <%= button_to "Delete", product_review_path(review.product_id, review.id), method: :delete %>
-<% end %>
+

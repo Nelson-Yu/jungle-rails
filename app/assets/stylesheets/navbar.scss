@@ -1,11 +1,13 @@
 body {
   .navbar-default {
-    background-color: #E8EDDF;
+    background-color: #E3C6AD;
+    border-bottom: 3px solid #689F38;
 
     .navbar-nav > li > a {
       font-size: 16px;
       line-height: 40px;
       color: #689F38;
+      font-weight: 600;
     }
   }
 

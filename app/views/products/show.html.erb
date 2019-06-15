@@ -28,25 +28,30 @@
 
   </article>
 
-  <div class="reviews-container">
-    <div class="create-review">
-      <% if @current_user %>
-        <h3>Create a review</h3>
-          <%= form_for :review, url: product_reviews_path(@product) do |f| %>
-            <p><%= f.select :rating, options_for_select(1..5), { prompt: "Rate this Product!" } %></p>
-            <%= f.label :description %><br>
-            <%= f.text_field :description%><br>
-            <%= f.submit("Create review") %><br>
-          <% end %>
-      <% end %>  
-    </div>
-
-    <div class="reviews">
-      <h3> <%= @count %> Reviews, Rating: <%= @average %>/5.0 ⭐</h3>
-      
-      <%= render @reviews %>
-    </div>
-
-  </div>
-  
 </section>
+
+<div class="reviews-container">
+  <div class="col-sm-4">
+    <% if @current_user %>
+      <h3>Create A Review!</h3>
+        <%= form_for :review, url: product_reviews_path(@product) do |f| %>
+          <p><%= f.select :rating, options_for_select(1..5), { prompt: "Rate this Product!" } %></p>
+          <p><strong>Comment</strong></p>
+          <%= f.text_area  :description%><br>
+          <%= f.submit("Create review") %><br>
+        <% end %>
+    <% else %>
+      <h3> <%= link_to 'Login', '/login'%>  To Create A Review!</h3>
+    <% end %>  
+  </div>
+
+  <div class="col-sm-7">
+    <h3>Reviews</h3>
+    <p><%= @count %> Reviews <br> Overall Rating: <%= @average %>/5.0 ⭐</p>
+
+    <dl class="dl-horizontal">
+      <%= render @reviews %>
+    </dl>
+  </div>
+
+</div>
