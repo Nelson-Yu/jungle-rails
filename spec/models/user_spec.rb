@@ -114,6 +114,33 @@ RSpec.describe User, type: :model do
 
       expect(current_user).to eql(nil)
     end
+
+    it 'returns user if valid and email has extra spaces' do
+      user = User.create(
+        first_name: 'Nelson',
+        last_name: 'Yu',
+        email: 'jungletest@gmail.com',
+        password: 'jungle123',
+        password_confirmation: 'jungle123'
+      )
+      current_user = User.authenticate_with_credentials(' jungletest@gmail.com  ', 'jungle123')
+
+      expect(current_user).to eql(user)
+    end
+
+    it 'returns user if valid and email is in wrong case' do
+      user = User.create(
+        first_name: 'Nelson',
+        last_name: 'Yu',
+        email: 'jungletest@gmail.com',
+        password: 'jungle123',
+        password_confirmation: 'jungle123'
+      )
+      current_user = User.authenticate_with_credentials('junGLEteST@gmAIL.com', 'jungle123')
+
+      expect(current_user).to eql(user)
+    end
+
   end
 
 end
