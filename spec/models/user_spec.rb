@@ -67,11 +67,11 @@ RSpec.describe User, type: :model do
       )
 
       user = User.create(
-        first_name: 'Nima',
-        last_name: 'Boscarino',
+        first_name: 'Nelson',
+        last_name: 'Yu',
         email: 'jungletest@gmail.com',
-        password: 'jungle456',
-        password_confirmation: 'jungle456'
+        password: 'jungle123',
+        password_confirmation: 'jungle123'
       )
       expect(user.errors.full_messages).to include ("Email has already been taken")
     end
