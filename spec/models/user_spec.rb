@@ -88,5 +88,32 @@ RSpec.describe User, type: :model do
     end
   end
 
+  describe '.authenticate_with_credentials' do
+    it 'returns user if valid' do
+      user = User.create(
+        first_name: 'Nelson',
+        last_name: 'Yu',
+        email: 'jungletest@gmail.com',
+        password: 'jungle123',
+        password_confirmation: 'jungle123'
+      )
+      current_user = User.authenticate_with_credentials('jungletest@gmail.com', 'jungle123')
+
+      expect(current_user).to eql(user)
+    end
+
+    it 'returns nil if invalid password' do
+      user = User.create(
+        first_name: 'Nelson',
+        last_name: 'Yu',
+        email: 'jungletest@gmail.com',
+        password: 'jungle123',
+        password_confirmation: 'jungle123'
+      )
+      current_user = User.authenticate_with_credentials('jungletest@gmail.com', 'jungle456s')
+
+      expect(current_user).to eql(nil)
+    end
+  end
 
 end
