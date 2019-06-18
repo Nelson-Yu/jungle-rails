@@ -13,7 +13,11 @@
 // Global
 body {
   padding-top: 70px;
-  background-color: #E3C6AD;
+  background-image: url(https://images.pexels.com/photos/1227648/pexels-photo-1227648.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  
+  .page-header h1 {
+    color: white;
+  }
 }
 
 // Bootstrap adjustments
