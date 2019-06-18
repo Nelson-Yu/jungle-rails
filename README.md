@@ -6,7 +6,7 @@ A mini e-commerce application built with Rails 4.2. This app allows users to sho
 ## Final Product
 
 !["Screenshot of Jungle-index"](https://github.com/Nelson-Yu/jungle-rails/blob/master/docs/jungle-new-index.png)
-!["Screenshot of Jungle-product"](https://github.com/Nelson-Yu/jungle-rails/blob/master/docs/jungle-new-product.png)
+!["Screenshot of Jungle-product"](https://github.com/Nelson-Yu/jungle-rails/blob/master/docs/jungle-new-products.png)
 !["Screenshot of Jungle-cart"](https://github.com/Nelson-Yu/jungle-rails/blob/master/docs/jungle-new-cart.png)
 !["Screenshot of Jungle-order"](https://github.com/Nelson-Yu/jungle-rails/blob/master/docs/jungle-new-order.png)
 
