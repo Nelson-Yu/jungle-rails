@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Visitor clicks on product on home page", type: :feature, js: true do
+RSpec.feature "Visitions click on add to cart button on home page", type: :feature, js: true do
 
   # SETUP
   before :each do 
@@ -15,13 +15,13 @@ RSpec.feature "Visitor clicks on product on home page", type: :feature, js: true
     )
   end
 
-  scenario "They see the product, they clicked on" do
+  scenario "They see the My Cart counter go up" do
     # ACT
     visit root_path
-    click_on 'Details »'
+    click_on 'Add'
 
     # VERIFY & DEBUG
-    expect(page).to have_css '.products-show', count: 1
+    expect(page).to have_content('My Cart (1)')
     save_screenshot
   end
 
