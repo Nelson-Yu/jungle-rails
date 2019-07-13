@@ -1,6 +1,8 @@
 Jungle
 =====================
 
+## Overview 
+
 A mini e-commerce application built with Rails 4.2. This app allows users to shop for their desired products and perform purchase transactions. Additionally, users may leave reviews and ratings for the products.
 
 ## Final Product
@@ -9,6 +11,20 @@ A mini e-commerce application built with Rails 4.2. This app allows users to sho
 !["Screenshot of Jungle-product"](https://github.com/Nelson-Yu/jungle-rails/blob/master/docs/jungle-new-products.png)
 !["Screenshot of Jungle-cart"](https://github.com/Nelson-Yu/jungle-rails/blob/master/docs/jungle-new-cart.png)
 !["Screenshot of Jungle-order"](https://github.com/Nelson-Yu/jungle-rails/blob/master/docs/jungle-new-order.png)
+
+
+## Tech Stack
+
+Back-end: 
+* Ruby on Rails 
+
+Front-end: 
+* HTML5 
+* SASS 
+* ERB 
+
+Database: 
+* PostgreSQL
 
 ## Getting Started
 
@@ -28,12 +44,6 @@ A mini e-commerce application built with Rails 4.2. This app allows users to sho
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
-
-## Tech Stack
-
-* Back-End: Ruby on Rails
-* Database: PostgreSQL
-* Front-End: HTML5, CSS, SASS, ERB 
 
 ## Dependencies
 
